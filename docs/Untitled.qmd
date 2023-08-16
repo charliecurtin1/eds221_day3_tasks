@@ -1,0 +1,19 @@
+---
+title: "Toolik Chem"
+format: html
+editor: visual
+---
+
+## Task 5
+
+```{r}
+library(tidyverse)
+library(here)
+library(janitor)
+```
+
+```{r}
+toolik_biochem <- read_csv(here("data", "2011_Kling_Akchem.csv"),
+                           na = c(".", "NA")) %>% 
+  clean_names()
+```
